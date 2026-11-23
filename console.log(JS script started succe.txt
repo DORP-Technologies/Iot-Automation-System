@@ -1,0 +1,122 @@
+console.log("JS script started successfully!")
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+
+// Replace with your Windows PC's local IP address
+const PC_IP = '192.168.0.175'; 
+const WS_URL = `ws://${PC_IP}:8080`;
+
+export default function App() {
+  const [telemetry, setTelemetry] = useState(null);
+  const [connected, setConnected] = useState(false);
+
+  useEffect(() => {
+    const ws = new WebSocket(WS_URL);
+
+    ws.onopen = () => {
+      setConnected(true);
+      console.log('Connected to PC Telemetry Server');
+    };
+
+    ws.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        setTelemetry(data);
+      } catch (err) {
+        console.error('Error parsing telemetry JSON:', err);
+      }
+    };
+
+    ws.onerror = (error) => {
+      console.error('WebSocket Error:', error.message);
+    };
+
+    ws.onclose = () => {
+      setConnected(false);
+      console.log('Disconnected from Telemetry Server');
+    };
+
+    return () => {
+      ws.close();
+    };
+  }, []);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>PC Telemetry Monitor</Text>
+      
+      <View style={[styles.statusBadge, { backgroundColor: connected ? '#38a169' : '#e53e3e' }]}>
+        <Text style={styles.statusText}>{connected ? 'Connected' : 'Disconnected'}</Text>
+      </View>
+
+      {telemetry ? (
+        <View style={styles.card}>
+          <Text style={styles.label}>Active App / Window:</Text>
+          <Text style={styles.value}>{telemetry.active_window}</Text>
+
+          <Text style={styles.label}>RAM Usage:</Text>
+          <Text style={styles.value}>{telemetry.ram_usage_percent.toFixed(1)}%</Text>
+
+          <Text style={styles.label}>Last Update:</Text>
+          <Text style={styles.subValue}>
+            {new Date(telemetry.timestamp * 1000).toLocaleTimeString()}
+          </Text>
+        </View>
+      ) : (
+        <ActivityIndicator size="large" color="#3182ce" style={{ marginTop: 20 }} />
+      )}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0f172a',
+    padding: 24,
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#f8fafc',
+    textAlign: 'center',
+    marginBottom: 12,
+  },
+  statusBadge: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 20,
+    alignSelf: 'center',
+    marginBottom: 24,
+  },
+  statusText: {
+    color: '#ffffff',
+    fontWeight: '600',
+    fontSize: 12,
+  },
+  card: {
+    backgroundColor: '#1e293b',
+    borderRadius: 12,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  label: {
+    fontSize: 12,
+    color: '#94a3b8',
+    textTransform: 'uppercase',
+    marginTop: 10,
+  },
+  value: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#38bdf8',
+    marginTop: 4,
+  },
+  subValue: {
+    fontSize: 14,
+    color: '#cbd5e1',
+    marginTop: 4,
+  },
+});

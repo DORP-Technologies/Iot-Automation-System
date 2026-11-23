@@ -1,0 +1,64 @@
+Rust PC Telemetry Agent — Troubleshooting & Startup Crash Debugging Guide
+===========================================================================
+
+1. Fixing Raw Pointer Handle Check (E0599: no method named `is_invalid`)
+-------------------------------------------------------------------------
+In Rust, raw pointers (*mut c_void) do not have an `.is_invalid()` method.
+Replace `.is_invalid()` with `.is_null()`:
+
+    // Before:
+    if hwnd.is_invalid() {
+        // ...
+    }
+
+    // After:
+    if hwnd.is_null() {
+        // ...
+    }
+
+
+2. Compiling & Building the Executable (.exe)
+---------------------------------------------
+- Run directly (Debug mode):
+    cargo run
+
+- Build standalone optimized executable (Release mode):
+    cargo build --release
+  Output path:
+    target\release\pc_telemetry_agent.exe
+
+
+3. Resolving Missing `dlltool.exe` on Windows GNU Toolchain
+-----------------------------------------------------------
+If using `x86_64-pc-windows-gnu`, Cargo requires MinGW-w64 binutils:
+1. Install MSYS2 (https://www.msys2.org/).
+2. Install the 64-bit toolchain inside MSYS2:
+       pacman -S mingw-w64-x86_64-toolchain
+3. Add `C:\msys64\mingw64\bin` to your Windows System Environment PATH.
+4. Restart your terminal and verify with `dlltool --version`.
+
+
+4. Catching Silent Startup Crashes (Panic Hook & Backtraces)
+------------------------------------------------------------
+If `pc_telemetry_agent.exe` exits immediately at startup without printing an error:
+
+Step A: Run with Rust backtraces enabled in PowerShell:
+    $env:RUST_BACKTRACE=1; cargo run
+
+Step B: Add a custom panic hook at the top of `fn main()` in `src/main.rs` to print panic info before exit:
+
+    fn main() {
+        // Catch panics and print them instead of silent crashing
+        std::panic::set_hook(Box::new(|panic_info| {
+            println!("PANIC OCCURRED: {:#?}", panic_info);
+        }));
+
+        println!("Starting telemetry agent...");
+
+        // Your existing code continues here...
+    }
+
+Common Startup Crash Causes in Win32 / Telemetry Agents:
+- Calling `.unwrap()` or `.expect()` on a null `HWND` from `GetForegroundWindow()` or `FindWindowW()`.
+- Dereferencing an invalid or null raw pointer in an `unsafe` block.
+- Missing system permissions or uninitialized UI/thread context when registering global hooks.

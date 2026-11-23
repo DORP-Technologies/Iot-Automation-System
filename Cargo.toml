@@ -1,0 +1,18 @@
+[package]
+name = "pc_telemetry_agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Retained for future async networking/WebSockets to Android/ESP32-C3
+tokio = { version = "1.0", features = ["full"] }
+# Cross-platform system & hardware telemetry (CPU, RAM, Network, Temps)
+sysinfo = "0.32"
+# Dedicated battery status & charge state crate for Windows laptops
+battery = "0.7"
+# Active window title capture (keep your existing crate if already added)
+active-win-pos-rs = "0.8"
+# JSON serialization & WebSocket server for LAN telemetry clients
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tungstenite = "0.24"

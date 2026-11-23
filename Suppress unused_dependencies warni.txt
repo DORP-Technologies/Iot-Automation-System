@@ -1,0 +1,187 @@
+// Suppress unused_dependencies warning for tokio until async networking is added
+#![allow(unused_imports)]
+
+use active_win_pos_rs::get_active_window;
+use battery::Manager as BatteryManager;
+use std::net::UdpSocket;
+use std::thread;
+use std::time::{Duration, SystemTime, UNIX_EPOCH};
+use sysinfo::{Components, Disks, Networks, System};
+
+/// Starts a background thread that broadcasts the telemetry agent's service
+/// identifier and TCP/WebSocket port over UDP every 2 seconds.
+pub fn start_discovery_beacon(telemetry_port: u16) {
+    thread::spawn(move || {
+        // Bind to an ephemeral local port on all network interfaces
+        let socket = match UdpSocket::bind("0.0.0.0:0") {
+            Ok(s) => s,
+            Err(e) => {
+                eprintln!("[Discovery] Failed to bind UDP socket: {}", e);
+                return;
+            }
+        };
+
+        // Enable SO_BROADCAST so packets can be sent to 255.255.255.255
+        if let Err(e) = socket.set_broadcast(true) {
+            eprintln!("[Discovery] Failed to enable UDP broadcast: {}", e);
+            return;
+        }
+
+        let payload = format!(
+            r#"{{"service":"pc_telemetry_agent","port":{},"version":1}}"#,
+            telemetry_port
+        );
+
+        println!(
+            "[Discovery] Broadcasting telemetry beacon on UDP 45678 -> {}",
+            payload
+        );
+
+        loop {
+            // 1. Global limited broadcast (works on most home/office routers)
+            let _ = socket.send_to(payload.as_bytes(), "255.255.255.255:45678");
+
+            // 2. Optional: If your router/hotspot blocks 255.255.255.255,
+            // also send to your subnet's directed broadcast address, e.g.:
+            // let _ = socket.send_to(payload.as_bytes(), "192.168.0.255:45678");
+
+            thread::sleep(Duration::from_secs(2));
+        }
+    });
+}
+
+fn main() {
+    println!("==========================================================");
+    println!("   PC TELEMETRY AGENT (CLI MODE) - INITIALIZING...        ");
+    println!("==========================================================");
+
+    let telemetry_port: u16 = 8080; // Replace with your actual telemetry server port
+
+    // Start background UDP auto-discovery beacon
+    start_discovery_beacon(telemetry_port);
+
+    // Start your existing telemetry server listening on 0.0.0.0:8080
+    // IMPORTANT: Ensure your server binds to "0.0.0.0:8080" (not "127.0.0.1:8080")
+    // so external LAN devices (your Android phone) can connect!
+    println!("[Server] Starting telemetry server on 0.0.0.0:{}", telemetry_port);
+    // start_telemetry_server(telemetry_port);
+
+    // 1. Initialize sysinfo System, Networks, Disks, and Components
+    let mut sys = System::new_all();
+    let mut networks = Networks::new_with_refreshed_list();
+    let mut disks = Disks::new_with_refreshed_list();
+    let mut components = Components::new_with_refreshed_list();
+
+    // 2. Initialize Battery Manager (Windows ACPI battery interface)
+    let battery_manager = BatteryManager::new().ok();
+
+    // Initial baseline sleep required by sysinfo to calculate accurate CPU usage
+    sys.refresh_all();
+    thread::sleep(Duration::from_millis(500));
+
+    println!("Agent running. Press Ctrl+C to stop.\n");
+
+    loop {
+        // Refresh CPU, Memory, Network, Disks, and Hardware Sensors
+        sys.refresh_cpu_all();
+        sys.refresh_memory();
+        networks.refresh();
+        disks.refresh();
+        components.refresh();
+
+        // --- A. ACTIVE WINDOW ---
+        let active_window_title = match get_active_window() {
+            Ok(win) => format!("{} ({})", win.title, win.app_name),
+            Err(_) => String::from("Unavailable / Desktop Focused"),
+        };
+
+        // --- B. CPU USAGE ---
+        let cpu_usage = sys.global_cpu_usage();
+        let cpu_count = sys.cpus().len();
+
+        // --- C. RAM USAGE ---
+        let total_mem_mb = sys.total_memory() / 1024 / 1024;
+        let used_mem_mb = sys.used_memory() / 1024 / 1024;
+        let mem_pct = if sys.total_memory() > 0 {
+            (sys.used_memory() as f32 / sys.total_memory() as f32) * 100.0
+        } else {
+            0.0
+        };
+
+        // --- D. BATTERY STATUS ---
+        let battery_status = if let Some(ref manager) = battery_manager {
+            match manager.batteries() {
+                Ok(mut batteries) => {
+                    if let Some(Ok(bat)) = batteries.next() {
+                        let charge_pct = bat.state_of_charge().value * 100.0;
+                        let state = format!("{:?}", bat.state());
+                        format!("{:.1}% [{}]", charge_pct, state)
+                    } else {
+                        String::from("No battery detected (AC / Desktop)")
+                    }
+                }
+                Err(_) => String::from("Battery read error"),
+            }
+        } else {
+            String::from("Battery interface unavailable")
+        };
+
+        // --- E. NETWORK TRAFFIC (Interval delta & totals) ---
+        let mut rx_delta_kb: f64 = 0.0;
+        let mut tx_delta_kb: f64 = 0.0;
+        let mut total_rx_mb: f64 = 0.0;
+        let mut total_tx_mb: f64 = 0.0;
+
+        for (_iface, data) in &networks {
+            // received() / transmitted() return bytes since last refresh()
+            rx_delta_kb += data.received() as f64 / 1024.0;
+            tx_delta_kb += data.transmitted() as f64 / 1024.0;
+            total_rx_mb += data.total_received() as f64 / (1024.0 * 1024.0);
+            total_tx_mb += data.total_transmitted() as f64 / (1024.0 * 1024.0);
+        }
+
+        // --- F. STORAGE / DISKS ---
+        let mut disk_summary = Vec::new();
+        for disk in &disks {
+            let total_gb = disk.total_space() as f64 / 1_073_741_824.0;
+            let avail_gb = disk.available_space() as f64 / 1_073_741_824.0;
+            let used_gb = total_gb - avail_gb;
+            disk_summary.push(format!(
+                "{:?}: {:.1}/{:.1} GB",
+                disk.mount_point(),
+                used_gb,
+                total_gb
+            ));
+        }
+
+        // --- PRINT SNAPSHOT ---
+        let ts = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap_or_default()
+            .as_secs();
+
+        println!("----------------------------------------------------------");
+        println!(" TELEMETRY SNAPSHOT | Unix Timestamp: {}", ts);
+        println!("----------------------------------------------------------");
+        println!(" Active Window : {}", active_window_title);
+        println!(" CPU Load      : {:.2}% ({} logical cores)", cpu_usage, cpu_count);
+        println!(" RAM Usage     : {} MB / {} MB ({:.1}%)", used_mem_mb, total_mem_mb, mem_pct);
+        println!(" Battery       : {}", battery_status);
+        println!(
+            " Network Rate  : Down {:.1} KB/s | Up {:.1} KB/s (Session: {:.2} MB Down / {:.2} MB Up)",
+            rx_delta_kb / 2.0,
+            tx_delta_kb / 2.0,
+            total_rx_mb,
+            total_tx_mb
+        );
+        println!(" Storage       : {}", disk_summary.join(" | "));
+
+        // Print hardware temperatures if sensors are exposed
+        for comp in &components {
+            println!(" Sensor [{}] : {:.1}°C", comp.label(), comp.temperature());
+        }
+
+        // Wait 2 seconds before next poll
+        thread::sleep(Duration::from_secs(2));
+    }
+}
