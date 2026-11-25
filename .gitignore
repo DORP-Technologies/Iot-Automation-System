@@ -1,0 +1,14 @@
+﻿# C++ / ESP32 / Arduino / PlatformIO build artifacts
+build/
+.pio/
+.vscode/.browse.VC.db*
+*.bin
+*.elf
+*.map
+
+# Scratch text files
+*.txt
+
+# OS & editor clutter
+.DS_Store
+Thumbs.db
