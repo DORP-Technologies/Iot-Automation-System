@@ -1,0 +1,55 @@
+================================================================================
+POWERSHELL CMDLETS FOR EXPO / REACT NATIVE METRO & ADB CONNECTIVITY TROUBLESHOOTING
+================================================================================
+
+1. CHECK WHAT IS LISTENING ON PORT 8081 / 8082
+--------------------------------------------------------------------------------
+Get-NetTCPConnection -LocalPort 8081,8082 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,State,OwningProcess
+
+# Inspect or stop the process using its OwningProcess ID:
+Get-Process -Id <OwningProcess>
+Stop-Process -Id <OwningProcess> -Force
+
+
+2. GET YOUR ACTIVE IPv4 ADDRESS FOR LAN CONNECTIONS
+--------------------------------------------------------------------------------
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notlike "127.*" -and $_.InterfaceAlias -notmatch "Loopback|vEthernet" } | Select-Object InterfaceAlias,IPAddress
+
+
+3. CHECK AND ALLOW FIREWALL RULES FOR NODE.JS AND ADB
+--------------------------------------------------------------------------------
+# Check existing rules:
+Get-NetFirewallRule | Where-Object { $_.DisplayName -match "Node|Expo|ADB" } | Select-Object Name,DisplayName,Enabled,Profile,Direction,Action
+
+# Run PowerShell as Administrator to allow inbound traffic on Private networks:
+New-NetFirewallRule -DisplayName "Expo Metro Bundler (8081-8082)" -Direction Inbound -Protocol TCP -LocalPort 8081,8082 -Profile Private -Action Allow
+
+# Verify the rule was created:
+Get-NetFirewallRule -DisplayName "Expo Metro Bundler (8081-8082)"
+
+
+4. SET ACTIVE NETWORK ADAPTER TO PRIVATE (IF NEEDED)
+--------------------------------------------------------------------------------
+# Check current network profile category:
+Get-NetConnectionProfile | Select-Object Name,InterfaceAlias,NetworkCategory
+
+# Run PowerShell as Administrator to switch from Public to Private:
+Set-NetConnectionProfile -InterfaceAlias "<YourInterfaceAlias>" -NetworkCategory Private
+
+
+5. USEFUL ADB & EXPO COMMANDS
+--------------------------------------------------------------------------------
+# Check connected Android devices:
+adb devices
+
+# Forward Metro bundler port over USB:
+adb reverse tcp:8081 tcp:8081
+
+# Verify active ADB reverse tunnels:
+adb reverse --list
+
+# Start Expo clearing cache on a clean port:
+npx expo start -c --port 8082 --host 127.0.0.1
+
+# Start Expo using Tunnel mode (bypasses LAN/client isolation):
+npx expo start --tunnel

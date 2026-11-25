@@ -1,0 +1,386 @@
+================================================================================
+STEP-BY-STEP IMPLEMENTATION GUIDE: ZERO-SCAN UDP AUTO-DISCOVERY
+(RUST PC TELEMETRY AGENT <-> EXPO / REACT NATIVE ANDROID APP)
+================================================================================
+
+OVERVIEW
+--------------------------------------------------------------------------------
+This guide walks through completing Step 2 (UDP Broadcast Beacon in your Rust PC
+Telemetry Agent) and Step 3 (UDP Auto-Discovery Listener in your Expo / React
+Native Android App) so both devices pair automatically on the same local Wi-Fi
+network without QR codes or manual IP address entry.
+
+Architecture Summary:
+  1. Your Rust PC agent binds a UDP socket and broadcasts a lightweight JSON
+     discovery packet every 2 seconds to port 45678 on the local LAN.
+  2. Your Android app listens on UDP port 45678, reads the incoming packet,
+     extracts the sender's IP address (rinfo.address) and telemetry TCP/WS
+     port from the JSON payload, caches it, and connects immediately.
+
+
+================================================================================
+PART 1 (STEP 2): ADD UDP BROADCAST DISCOVERY TO THE RUST PC AGENT
+================================================================================
+
+1.1 Locate Your Rust Agent Entry Point
+--------------------------------------------------------------------------------
+Open your Rust project folder (`pc_telemetry_agent`) in VS Code and open
+`src/main.rs` (or the module where your HTTP / WebSocket telemetry server is
+initialized).
+
+Note: This implementation uses only Rust's standard library (`std::net`,
+`std::thread`, `std::time`), so no extra crates are required in `Cargo.toml`.
+
+
+1.2 Add the Discovery Beacon Function
+--------------------------------------------------------------------------------
+Add the following function to `src/main.rs` (or in a dedicated module such as
+`src/discovery.rs`):
+
+```rust
+use std::net::UdpSocket;
+use std::thread;
+use std::time::Duration;
+
+/// Starts a background thread that broadcasts the telemetry agent's service
+/// identifier and TCP/WebSocket port over UDP every 2 seconds.
+pub fn start_discovery_beacon(telemetry_port: u16) {
+    thread::spawn(move || {
+        // Bind to an ephemeral local port on all network interfaces
+        let socket = match UdpSocket::bind("0.0.0.0:0") {
+            Ok(s) => s,
+            Err(e) => {
+                eprintln!("[Discovery] Failed to bind UDP socket: {}", e);
+                return;
+            }
+        };
+
+        // Enable SO_BROADCAST so packets can be sent to 255.255.255.255
+        if let Err(e) = socket.set_broadcast(true) {
+            eprintln!("[Discovery] Failed to enable UDP broadcast: {}", e);
+            return;
+        }
+
+        let payload = format!(
+            r#"{{"service":"pc_telemetry_agent","port":{},"version":1}}"#,
+            telemetry_port
+        );
+
+        println!(
+            "[Discovery] Broadcasting telemetry beacon on UDP 45678 -> {}",
+            payload
+        );
+
+        loop {
+            // 1. Global limited broadcast (works on most home/office routers)
+            let _ = socket.send_to(payload.as_bytes(), "255.255.255.255:45678");
+
+            // 2. Optional: If your router/hotspot blocks 255.255.255.255,
+            // also send to your subnet's directed broadcast address, e.g.:
+            // let _ = socket.send_to(payload.as_bytes(), "192.168.0.255:45678");
+
+            thread::sleep(Duration::from_secs(2));
+        }
+    });
+}
+```
+
+
+1.3 Start the Beacon Alongside Your Telemetry Server
+--------------------------------------------------------------------------------
+Inside `fn main()` in `src/main.rs`, call `start_discovery_beacon(telemetry_port)`
+BEFORE starting your blocking HTTP or WebSocket server loop:
+
+```rust
+fn main() {
+    let telemetry_port: u16 = 8080; // Replace with your actual telemetry server port
+
+    // Start background UDP auto-discovery beacon
+    start_discovery_beacon(telemetry_port);
+
+    // Start your existing telemetry server listening on 0.0.0.0:8080
+    // IMPORTANT: Ensure your server binds to "0.0.0.0:8080" (not "127.0.0.1:8080")
+    // so external LAN devices (your Android phone) can connect!
+    println!("[Server] Starting telemetry server on 0.0.0.0:{}", telemetry_port);
+    // start_telemetry_server(telemetry_port);
+}
+```
+
+CRITICAL CHECK:
+Make sure your main Rust telemetry server binds to `0.0.0.0:<port>` rather than
+`127.0.0.1:<port>`. If it only binds to `127.0.0.1`, the phone will discover your
+PC's LAN IP via UDP, but TCP/WebSocket connections to that LAN IP will be refused.
+
+
+1.4 Allow Rust Ports Through Windows Defender Firewall
+--------------------------------------------------------------------------------
+Open PowerShell as Administrator and run the following cmdlets to ensure Windows
+Firewall does not block outbound UDP broadcasts or inbound telemetry connections
+from your phone on your Private Wi-Fi network:
+
+```powershell
+# Allow inbound TCP connections to your Rust telemetry server (adjust port if needed)
+New-NetFirewallRule -DisplayName "PC Telemetry Agent TCP (8080)" -Direction Inbound -Protocol TCP -LocalPort 8080 -Profile Private -Action Allow
+
+# Allow outbound/inbound UDP discovery traffic on port 45678
+New-NetFirewallRule -DisplayName "PC Telemetry Discovery UDP (45678)" -Direction Inbound -Protocol UDP -LocalPort 45678 -Profile Private -Action Allow
+New-NetFirewallRule -DisplayName "PC Telemetry Discovery UDP Out (45678)" -Direction Outbound -Protocol UDP -RemotePort 45678 -Profile Private -Action Allow
+```
+
+
+1.5 Build and Verify the Rust Agent
+--------------------------------------------------------------------------------
+Run `cargo run` in your Rust project directory. You should see:
+  `[Discovery] Broadcasting telemetry beacon on UDP 45678 -> {"service":"pc_telemetry_agent","port":8080,"version":1}`
+
+Optional quick verification in a second PowerShell terminal on your PC:
+```powershell
+# Listen briefly on UDP 45678 to confirm packets are firing
+$udp = New-Object System.Net.Sockets.UdpClient(45678)
+$ep = New-Object System.Net.IPEndPoint([System.Net.IPAddress]::Any, 0)
+$bytes = $udp.Receive([ref]$ep)
+[System.Text.Encoding]::UTF8.GetString($bytes)
+$udp.Close()
+```
+
+
+================================================================================
+PART 2 (STEP 3): ADD UDP AUTO-DISCOVERY TO THE EXPO / REACT NATIVE APP
+================================================================================
+
+2.1 Install Required Packages
+--------------------------------------------------------------------------------
+Because UDP sockets require native Android networking APIs (not available in
+standard Expo Go), install `react-native-udp` (and `@react-native-async-storage/async-storage`
+to cache the last working IP for instant reconnects):
+
+```powershell
+npx expo install react-native-udp @react-native-async-storage/async-storage
+```
+
+
+2.2 Configure Android Permissions & Cleartext Traffic
+--------------------------------------------------------------------------------
+Open `app.json` (or `app.config.js`) in your Expo project and verify that Android
+has internet/Wi-Fi permissions and allows local HTTP/WS (`ws://` or `http://`)
+traffic on LAN IPs:
+
+```json
+{
+  "expo": {
+    "android": {
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_MULTICAST_STATE"
+      ],
+      "usesCleartextTraffic": true
+    }
+  }
+}
+```
+
+If you are using `expo-build-properties` or an ejected `android/` folder, ensure
+`android:usesCleartextTraffic="true"` is set in
+`android/app/src/main/AndroidManifest.xml` inside the `<application>` tag so
+Android 9+ does not block local `ws://192.168.x.x:8080` or `http://192.168.x.x:8080`
+connections.
+
+
+2.3 Create the Auto-Discovery Service Module
+--------------------------------------------------------------------------------
+Create a new file `src/services/discovery.js` (or `services/discovery.ts`) in
+your React Native project:
+
+```javascript
+import dgram from 'react-native-udp';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const DISCOVERY_PORT = 45678;
+const CACHE_KEY = '@telemetry_last_host';
+
+/**
+ * Listens for UDP broadcast packets from pc_telemetry_agent.
+ * Calls onHostDiscovered({ ip, port }) as soon as a valid beacon arrives.
+ * Returns a cleanup function to close the UDP socket.
+ */
+export function startHostDiscovery(onHostDiscovered, onError) {
+  let isClosed = false;
+  const socket = dgram.createSocket({ type: 'udp4', reusePort: true });
+
+  socket.on('error', (err) => {
+    if (!isClosed && onError) {
+      onError(err);
+    }
+  });
+
+  socket.on('message', async (msg, rinfo) => {
+    if (isClosed) return;
+
+    try {
+      const raw = msg.toString('utf8');
+      const data = JSON.parse(raw);
+
+      if (data && data.service === 'pc_telemetry_agent' && data.port) {
+        const hostInfo = {
+          ip: rinfo.address, // Automatically captured from sender packet header
+          port: Number(data.port),
+        };
+
+        // Save to local cache for instant startup on next launch
+        await AsyncStorage.setItem(CACHE_KEY, JSON.stringify(hostInfo));
+
+        // Stop listening once found and notify caller
+        cleanup();
+        onHostDiscovered(hostInfo);
+      }
+    } catch (_err) {
+      // Ignore non-JSON or unrelated UDP broadcast traffic on the network
+    }
+  });
+
+  socket.bind(DISCOVERY_PORT, '0.0.0.0', (err) => {
+    if (err && onError) {
+      onError(err);
+    }
+  });
+
+  function cleanup() {
+    if (!isClosed) {
+      isClosed = true;
+      try {
+        socket.close();
+      } catch (_e) {}
+    }
+  }
+
+  return cleanup;
+}
+
+/**
+ * Retrieves the last successfully paired host from storage (optional fast path).
+ */
+export async function getCachedHost() {
+  try {
+    const saved = await AsyncStorage.getItem(CACHE_KEY);
+    return saved ? JSON.parse(saved) : null;
+  } catch (_e) {
+    return null;
+  }
+}
+```
+
+
+2.4 Wire Auto-Discovery into Your Main Screen / Telemetry Hook
+--------------------------------------------------------------------------------
+In your main app screen (e.g., `App.tsx` or `app/index.tsx`), trigger UDP
+discovery automatically on mount and connect to your telemetry stream once
+`host` is resolved:
+
+```javascript
+import React, { useEffect, useState } from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
+import { startHostDiscovery, getCachedHost } from './src/services/discovery';
+
+export default function App() {
+  const [status, setStatus] = useState('Searching for PC telemetry agent...');
+  const [host, setHost] = useState(null);
+  const [telemetry, setTelemetry] = useState(null);
+
+  useEffect(() => {
+    let stopDiscovery = null;
+
+    // Start UDP auto-discovery immediately on app launch
+    stopDiscovery = startHostDiscovery(
+      (discoveredHost) => {
+        setHost(discoveredHost);
+        setStatus(`Connected to ${discoveredHost.ip}:${discoveredHost.port}`);
+      },
+      (err) => {
+        setStatus(`Discovery error: ${err.message}`);
+      }
+    );
+
+    return () => {
+      if (stopDiscovery) stopDiscovery();
+    };
+  }, []);
+
+  // Connect WebSocket (or HTTP polling) once host IP and port are discovered
+  useEffect(() => {
+    if (!host) return;
+
+    const wsUrl = `ws://${host.ip}:${host.port}`;
+    const ws = new WebSocket(wsUrl);
+
+    ws.onopen = () => {
+      setStatus(`Live stream active (${host.ip}:${host.port})`);
+    };
+
+    ws.onmessage = (event) => {
+      try {
+        setTelemetry(JSON.parse(event.data));
+      } catch (_e) {}
+    };
+
+    ws.onerror = () => {
+      setStatus('Connection lost. Re-scanning...');
+      setHost(null); // Triggers re-discovery if PC IP changed
+    };
+
+    return () => ws.close();
+  }, [host]);
+
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
+      {!host && <ActivityIndicator size="large" />}
+      <Text style={{ marginTop: 12, fontSize: 16 }}>{status}</Text>
+      {telemetry && (
+        <Text style={{ marginTop: 20 }}>
+          {JSON.stringify(telemetry, null, 2)}
+        </Text>
+      )}
+    </View>
+  );
+}
+```
+
+
+2.5 Rebuild Standalone APK with Native UDP Module Included
+--------------------------------------------------------------------------------
+Because `react-native-udp` contains native Android Java/Kotlin code, you must
+regenerate the native Android project and build a fresh standalone release APK:
+
+```powershell
+# 1. Verify package.json "main" points to your real entry file (e.g. "index.js" or "expo-router/entry")
+# 2. Regenerate native Android project with react-native-udp linked
+npx expo prebuild --platform android --clean
+
+# 3. Compile standalone release APK (no Metro bundler or barcode required)
+cd android
+.\gradlew assembleRelease
+```
+
+Locate your final standalone APK at:
+  `androidppuild\outputspkeleasepp-release.apk`
+
+Install it on your Android device via ADB or direct file transfer:
+```powershell
+adb install -r appuild\outputspkeleasepp-release.apk
+```
+
+
+================================================================================
+END-TO-END VERIFICATION CHECKLIST
+================================================================================
+[ ] 1. Windows PC and Android phone are connected to the same Wi-Fi network
+       (AP/Client Isolation is disabled on the router/hotspot).
+[ ] 2. Windows Wi-Fi network profile is set to "Private".
+[ ] 3. Rust telemetry server is bound to `0.0.0.0:<port>` (not `127.0.0.1`).
+[ ] 4. Rust agent is running (`cargo run` or release `.exe`) and logging
+       `Broadcasting telemetry beacon on UDP 45678`.
+[ ] 5. Standalone Android APK launches directly into your UI (no Metro QR screen)
+       and transitions from "Searching for PC telemetry agent..." to live data
+       within 2 seconds.
+================================================================================

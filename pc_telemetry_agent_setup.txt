@@ -1,0 +1,157 @@
+================================================================================
+UPDATED Cargo.toml DEPENDENCIES
+================================================================================
+
+[package]
+name = "pc_telemetry_agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Retained for future async networking/WebSockets to Android/ESP32-C3
+tokio = { version = "1.0", features = ["full"] }
+# Cross-platform system & hardware telemetry (CPU, RAM, Network, Temps)
+sysinfo = "0.32"
+# Dedicated battery status & charge state crate for Windows laptops
+battery = "0.7"
+# Active window title capture (keep your existing crate if already added)
+active-win-pos-rs = "0.8"
+
+
+================================================================================
+DROP-IN src/main.rs SCRIPT
+================================================================================
+
+// Suppress unused_dependencies warning for tokio until async networking is added
+#![allow(unused_imports)]
+
+use active_win_pos_rs::get_active_window;
+use battery::Manager as BatteryManager;
+use std::thread;
+use std::time::{Duration, SystemTime, UNIX_EPOCH};
+use sysinfo::{Components, Disks, Networks, System};
+
+fn main() {
+    println!("==========================================================");
+    println!("   PC TELEMETRY AGENT (CLI MODE) - INITIALIZING...        ");
+    println!("==========================================================");
+
+    // 1. Initialize sysinfo System, Networks, Disks, and Components
+    let mut sys = System::new_all();
+    let mut networks = Networks::new_with_refreshed_list();
+    let mut disks = Disks::new_with_refreshed_list();
+    let mut components = Components::new_with_refreshed_list();
+
+    // 2. Initialize Battery Manager (Windows ACPI battery interface)
+    let battery_manager = BatteryManager::new().ok();
+
+    // Initial baseline sleep required by sysinfo to calculate accurate CPU usage
+    sys.refresh_all();
+    thread::sleep(Duration::from_millis(500));
+
+    println!("Agent running. Press Ctrl+C to stop.\n");
+
+    loop {
+        // Refresh CPU, Memory, Network, Disks, and Hardware Sensors
+        sys.refresh_cpu_all();
+        sys.refresh_memory();
+        networks.refresh();
+        disks.refresh();
+        components.refresh();
+
+        // --- A. ACTIVE WINDOW ---
+        let active_window_title = match get_active_window() {
+            Ok(win) => format!("{} ({})", win.title, win.app_name),
+            Err(_) => String::from("Unavailable / Desktop Focused"),
+        };
+
+        // --- B. CPU USAGE ---
+        let cpu_usage = sys.global_cpu_usage();
+        let cpu_count = sys.cpus().len();
+
+        // --- C. RAM USAGE ---
+        let total_mem_mb = sys.total_memory() / 1024 / 1024;
+        let used_mem_mb = sys.used_memory() / 1024 / 1024;
+        let mem_pct = if sys.total_memory() > 0 {
+            (sys.used_memory() as f32 / sys.total_memory() as f32) * 100.0
+        } else {
+            0.0
+        };
+
+        // --- D. BATTERY STATUS ---
+        let battery_status = if let Some(ref manager) = battery_manager {
+            match manager.batteries() {
+                Ok(mut batteries) => {
+                    if let Some(Ok(bat)) = batteries.next() {
+                        let charge_pct = bat.state_of_charge().value * 100.0;
+                        let state = format!("{:?}", bat.state());
+                        format!("{:.1}% [{}]", charge_pct, state)
+                    } else {
+                        String::from("No battery detected (AC / Desktop)")
+                    }
+                }
+                Err(_) => String::from("Battery read error"),
+            }
+        } else {
+            String::from("Battery interface unavailable")
+        };
+
+        // --- E. NETWORK TRAFFIC (Interval delta & totals) ---
+        let mut rx_delta_kb: f64 = 0.0;
+        let mut tx_delta_kb: f64 = 0.0;
+        let mut total_rx_mb: f64 = 0.0;
+        let mut total_tx_mb: f64 = 0.0;
+
+        for (_iface, data) in &networks {
+            // received() / transmitted() return bytes since last refresh()
+            rx_delta_kb += data.received() as f64 / 1024.0;
+            tx_delta_kb += data.transmitted() as f64 / 1024.0;
+            total_rx_mb += data.total_received() as f64 / (1024.0 * 1024.0);
+            total_tx_mb += data.total_transmitted() as f64 / (1024.0 * 1024.0);
+        }
+
+        // --- F. STORAGE / DISKS ---
+        let mut disk_summary = Vec::new();
+        for disk in &disks {
+            let total_gb = disk.total_space() as f64 / 1_073_741_824.0;
+            let avail_gb = disk.available_space() as f64 / 1_073_741_824.0;
+            let used_gb = total_gb - avail_gb;
+            disk_summary.push(format!(
+                "{:?}: {:.1}/{:.1} GB",
+                disk.mount_point(),
+                used_gb,
+                total_gb
+            ));
+        }
+
+        // --- PRINT SNAPSHOT ---
+        let ts = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap_or_default()
+            .as_secs();
+
+        println!("----------------------------------------------------------");
+        println!(" TELEMETRY SNAPSHOT | Unix Timestamp: {}", ts);
+        println!("----------------------------------------------------------");
+        println!(" Active Window : {}", active_window_title);
+        println!(" CPU Load      : {:.2}% ({} logical cores)", cpu_usage, cpu_count);
+        println!(" RAM Usage     : {} MB / {} MB ({:.1}%)", used_mem_mb, total_mem_mb, mem_pct);
+        println!(" Battery       : {}", battery_status);
+        println!(
+            " Network Rate  : Down {:.1} KB/s | Up {:.1} KB/s (Session: {:.2} MB Down / {:.2} MB Up)",
+            rx_delta_kb / 2.0,
+            tx_delta_kb / 2.0,
+            total_rx_mb,
+            total_tx_mb
+        );
+        println!(" Storage       : {}", disk_summary.join(" | "));
+
+        // Print hardware temperatures if sensors are exposed
+        for comp in &components {
+            println!(" Sensor [{}] : {:.1}°C", comp.label(), comp.temperature());
+        }
+
+        // Wait 2 seconds before next poll
+        thread::sleep(Duration::from_secs(2));
+    }
+}

@@ -1,0 +1,13 @@
+# 1. Create Inbound Allow Rules for Ports 8080 & 8081
+# NOTE: Run PowerShell as Administrator to execute this command
+New-NetFirewallRule -DisplayName "Expo & Dev Server (8080-8081)" `
+  -Direction Inbound `
+  -Protocol TCP `
+  -LocalPort 8080,8081 `
+  -Action Allow `
+  -Profile Private,Public
+
+
+# 2. Confirm What Is Listening on Ports 8080 & 8081
+Get-NetTCPConnection -LocalPort 8080,8081 -State Listen -ErrorAction SilentlyContinue |
+  Select-Object LocalAddress, LocalPort, @{Name="Process";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}}
