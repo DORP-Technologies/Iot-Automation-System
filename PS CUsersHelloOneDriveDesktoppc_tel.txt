@@ -1,0 +1,723 @@
+PS C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp> $env:NODE_ENV = "production"
+>> npx expo prebuild --platform android
+>> Push-Location .\android
+>> .\gradlew assembleRelease
+>> Pop-Location
+√ Created native directory | reusing /android
+› Using current versions instead of recommended react-native@0.76.9.
+√ Updated package.json | no changes
+» android: userInterfaceStyle: Install expo-system-ui in your project to enable this feature.
+√ Finished prebuild
+The Daemon will expire after the build after running out of JVM Metaspace.
+The project memory settings are likely not configured or are configured to an insufficient value.
+The daemon will restart for the next build, which may increase subsequent build times.
+These settings can be adjusted by setting 'org.gradle.jvmargs' in 'gradle.properties'.
+The currently configured max heap space is '2 GiB' and the configured max metaspace is '512 MiB'.
+For more information on how to set these values, please refer to https://docs.gradle.org/8.10.2/userguide/build_environment.html#sec:configuring_jvm_memory in the Gradle documentation.
+To disable this warning, set 'org.gradle.daemon.performance.disable-logging=true'.
+Daemon will be stopped at the end of the build after running out of JVM Metaspace
+
+> Configure project :expo
+
+Using expo modules
+  - expo-asset (11.0.5)
+  - expo-constants (17.0.8)
+  - expo-file-system (18.0.12)
+  - expo-font (13.0.4)
+  - expo-image (2.0.7)
+  - expo-keep-awake (14.0.3)
+  - expo-modules-core (2.2.3)
+  - expo-splash-screen (0.29.24)
+  - expo-web-browser (14.0.2)
+
+
+> Configure project :react-native-reanimated
+Android gradle plugin: 8.6.0
+Gradle: 8.10.2
+
+> Task :app:createBundleReleaseJsAndAssets
+Using src/app as the root directory for Expo Router.
+Starting Metro Bundler
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Android Bundled 24829ms node_modules\expo-router\entry.js (913 modules)
+Writing bundle output to: android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle                       
+Writing sourcemap output to: android\app\build\intermediates\sourcemaps\react\release\index.android.bundle.packager.map                
+Copying 25 asset files
+Done writing bundle output
+Done writing sourcemap output
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:2374:20: warning: the variable "Promise" was not declared in function "promiseMethodWrapper"
+        return new Promise((resolve, reject) => {
+                   ^~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:2596:23: warning: the variable "DebuggerInternal" was not declared in function "__shouldPauseOnThrow"
+        return typeof DebuggerInternal !== 'undefined' && DebuggerInternal.sh...
+                      ^~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:3918:5: warning: the variable "setImmediate" was not declared in function "handleResolved"
+    setImmediate(function () {
+    ^~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:5272:94: warning: the variable "setTimeout" was not declared in anonymous arrow function " 237#"
+...).then(callback).catch(error => setTimeout(() => {
+                                   ^~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7550:5: warning: the variable "Headers" was not declared in anonymous function " 310#"
+    Headers,
+    ^~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7551:5: warning: the variable "Request" was not declared in anonymous function " 310#"
+    Request,
+    ^~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7552:5: warning: the variable "Response" was not declared in anonymous function " 310#"
+    Response
+    ^~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7709:24: warning: the variable "FileReader" was not declared in function "readBlobAsArrayBuffer"
+      var reader = new FileReader();
+                       ^~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7760:36: warning: the variable "Blob" was not declared in anonymous function " 321#"
+        } else if (support.blob && Blob.prototype.isPrototypeOf(body)) {
+                                   ^~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7762:40: warning: the variable "FormData" was not declared in anonymous function " 321#"
+        } else if (support.formData && FormData.prototype.isPrototypeOf(body)) {
+                                       ^~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7764:44: warning: the variable "URLSearchParams" was not declared in anonymous function " 321#"
+...e if (support.searchParams && URLSearchParams.prototype.isPrototypeOf(body...
+                                 ^~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7883:26: warning: the variable "AbortController" was not declared in anonymous function " 327#"
+          var ctrl = new AbortController();
+                         ^~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:8017:23: warning: the variable "XMLHttpRequest" was not declared in anonymous function " 331#"
+        var xhr = new XMLHttpRequest();
+                      ^~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:7562:71: warning: the variable "self" was not declared in anonymous function " 313#"
+...undefined' && globalThis || typeof self !== 'undefined' && self ||
+                                      ^~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:17151:31: warning: the variable "nativeFabricUIManager" was not declared in anonymous function " 644#"
+  var _nativeFabricUIManage = nativeFabricUIManager,
+                              ^~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:17179:21: warning: the variable "clearTimeout" was not declared in anonymous function " 644#"
+    cancelTimeout = clearTimeout;
+                    ^~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:17192:51: warning: the variable "RN$enableMicrotasksInReact" was not declared in anonymous function " 644#"
+... "undefined" !== typeof RN$enableMicrotasksInReact && !!RN$enableMicrotask...
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:17193:47: warning: the variable "queueMicrotask" was not declared in anonymous function " 644#"
+...otask = "function" === typeof queueMicrotask ? queueMicrotask : scheduleTi...
+                                 ^~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:21614:30: warning: the variable "__REACT_DEVTOOLS_GLOBAL_HOOK__" was not declared in anonymous function " 644#"
+  if ("undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__) {
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:21752:26: warning: the variable "navigator" was not declared in anonymous function " 677#"
+  "undefined" !== typeof navigator && undefined !== navigator.scheduling && u...
+                         ^~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:21862:37: warning: the variable "MessageChannel" was not declared in anonymous function " 677#"
+  };else if ("undefined" !== typeof MessageChannel) {
+                                    ^~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:21877:34: warning: the variable "nativeRuntimeScheduler" was not declared in anonymous function " 677#"
+... = "undefined" !== typeof nativeRuntimeScheduler ? nativeRuntimeScheduler....
+                             ^~~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:30738:16: warning: the variable "SharedArrayBuffer" was not declared in function "from"
+    if (typeof SharedArrayBuffer !== 'undefined' && (isInstance(value, Shared...
+               ^~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:38638:34: warning: the variable "requestAnimationFrame" was not declared in function "start 9#"
+...    this._animationFrame = requestAnimationFrame(this.onUpdate.bind(this));
+                              ^~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:53912:26: warning: the variable "SuppressedError" was not declared in anonymous function " 1652#"
+    "function" == typeof SuppressedError && SuppressedError;
+                         ^~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:54197:34: warning: the variable "structuredClone" was not declared in function "be"
+        } : "function" == typeof structuredClone ? function (e) {
+                                 ^~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:61746:16: warning: Direct call to eval(), but lexical scope is not supported.
+        return eval(body);
+               ^~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:65077:38: warning: the variable "document" was not declared in anonymous function " 2246#"
+...r useClientLayoutEffect = typeof document !== 'undefined' || typeof naviga...
+                                    ^~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:70968:9: warning: the variable "REACT_NAVIGATION_DEVTOOLS" was not declared in anonymous arrow function " 2566#"
+        REACT_NAVIGATION_DEVTOOLS.set(refContainer.current, {
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:77032:16: warning: the variable "requestIdleCallback" was not declared in anonymous arrow function " 2826#"
+      var id = requestIdleCallback(() => {
+               ^~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:77035:20: warning: the variable "cancelIdleCallback" was not declared in anonymous arrow function " 2828#"
+      return () => cancelIdleCallback(id);
+                   ^~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:80642:11: warning: the variable "cancelAnimationFrame" was not declared in function "cleanup"
+          cancelAnimationFrame(this.splashScreenAnimationFrame);
+          ^~~~~~~~~~~~~~~~~~~~
+android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle:81823:16: warning: the variable "ReactNativeWebView" was not declared in function "emitDomEvent"
+    if (typeof ReactNativeWebView !== 'undefined') {
+               ^~~~~~~~~~~~~~~~~~
+
+> Task :expo-file-system:processReleaseManifest
+C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\expo-file-system\android\src\main\AndroidManifest.xml:6:9-8:20 Warning:
+        provider#expo.modules.filesystem.FileSystemFileProvider@android:authorities was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
+
+> Task :expo-modules-core:processReleaseManifest                                                                                       
+C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\expo-modules-core\android\src\main\AndroidManifest.xml:8:9-11:45 Warning:
+        meta-data#com.facebook.soloader.enabled@android:value was tagged at AndroidManifest.xml:8 to replace other declarations but no other declaration present
+
+> Task :react-native-async-storage_async-storage:processReleaseManifest
+package="com.reactnativecommunity.asyncstorage" found in source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-safe-area-context:processReleaseManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-screens:processReleaseManifest
+package="com.swmansion.rnscreens" found in source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.    
+Recommendation: remove package="com.swmansion.rnscreens" from the source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-udp:processReleaseManifest
+package="com.tradle.react" found in source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-udp\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.    
+Recommendation: remove package="com.tradle.react" from the source AndroidManifest.xml: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-udp\android\src\main\AndroidManifest.xml.
+
+> Task :app:processReleaseMainManifest
+C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\android\app\src\main\AndroidManifest.xml Warning:
+        provider#expo.modules.filesystem.FileSystemFileProvider@android:authorities was tagged at AndroidManifest.xml:0 to replace other declarations but no other declaration present
+
+> Task :react-native-async-storage_async-storage:compileReleaseJavaWithJavac
+C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\@react-native-async-storage\async-storage\android\src\main\java\com\reactnativecommunity\asyncstorage\AsyncStorageModule.java:84: warning: [removal] onCatalystInstanceDestroy() in NativeModule has been deprecated and marked for removal
+  public void onCatalystInstanceDestroy() {
+              ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.                                                                                   
+Note: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\@react-native-async-storage\async-storage\android\src\javaPackage\java\com\reactnativecommunity\asyncstorage\AsyncStoragePackage.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+
+> Task :react-native-reanimated:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.                                                                               
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-udp:compileReleaseJavaWithJavac
+C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-udp\android\src\main\java\com\tradle\react\UdpSockets.java:51: warning: [removal] onCatalystInstanceDestroy() in NativeModule has been deprecated and marked for removal
+    public void onCatalystInstanceDestroy() {
+                ^
+1 warning
+
+> Task :react-native-safe-area-context:compileReleaseKotlin                                                                            
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaContextPackage.kt:27:11 'constructor ReactModuleInfo(String, String, Boolean, Boolean, Boolean, Boolean, Boolean)' is deprecated. use ReactModuleInfo(String, String, boolean, boolean, boolean, boolean)]
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaContextPackage.kt:33:27 'getter for hasConstants: Boolean' is deprecated. This property is unused and it's planning to be removed in a future version of
+        React Native. Please refrain from using it.
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaView.kt:59:23 'getter for uiImplementation: UIImplementation!' is deprecated. Deprecated in Java
+
+> Task :react-native-safe-area-context:compileReleaseJavaWithJavac
+Note: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-safe-area-context\android\src\paper\java\com\th3rdwave\safeareacontext\NativeSafeAreaContextSpec.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :react-native-screens:compileReleaseKotlin
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/CustomToolbar.kt:19:53 'FrameCallback' is deprecated. Use Choreographer.FrameCallback instead
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/CustomToolbar.kt:20:38 'FrameCallback' is deprecated. Use Choreographer.FrameCallback instead
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/RNScreensPackage.kt:64:17 'constructor ReactModuleInfo(String, String, Boolean, Boolean, Boolean, Boolean, Boolean)' is deprecated. use ReactModuleInfo(String, String, boolean, boolean, boolean, boolean)]
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:45:77 Unchecked cast: CoordinatorLayout.Behavior<(raw) View!>? to BottomSheetBehavior<Screen>
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenContainer.kt:33:53 'FrameCallback' is deprecated. Use Choreographer.FrameCallback instead       
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenContainer.kt:34:38 'FrameCallback' is deprecated. Use Choreographer.FrameCallback instead       
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenFooter.kt:252:9 Parameter 'changed' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenFooter.kt:253:9 Parameter 'left' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenFooter.kt:254:9 Parameter 'top' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenFooter.kt:255:9 Parameter 'right' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenFooter.kt:256:9 Parameter 'bottom' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:257:31 'setter for targetElevation: Float' is deprecated. Deprecated in Java   
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:260:13 'setHasOptionsMenu(Boolean): Unit' is deprecated. Deprecated in Java    
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:496:22 'onPrepareOptionsMenu(Menu): Unit' is deprecated. Deprecated in Java    
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:504:22 'onCreateOptionsMenu(Menu, MenuInflater): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfig.kt:100:38 'getter for systemWindowInsetTop: Int' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfigViewManager.kt:7:34 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfigViewManager.kt:209:9 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfigViewManager.kt:211:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfigViewManager.kt:213:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:7:34 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:375:48 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:376:49 'MapBuilder' is deprecated. Deprecated in Java                            
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:377:45 'MapBuilder' is deprecated. Deprecated in Java                            
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:378:52 'MapBuilder' is deprecated. Deprecated in Java                            
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:379:48 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:380:51 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:381:56 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:382:57 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:383:51 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:55:42 'replaceSystemWindowInsets(Int, Int, Int, Int): WindowInsetsCompat' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:56:39 'getter for systemWindowInsetLeft: Int' is deprecated. Deprecated in Java 
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:58:39 'getter for systemWindowInsetRight: Int' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:59:39 'getter for systemWindowInsetBottom: Int' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:98:53 'getter for statusBarColor: Int' is deprecated. Deprecated in Java        
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:109:48 'getter for statusBarColor: Int' is deprecated. Deprecated in Java       
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:112:32 'setter for statusBarColor: Int' is deprecated. Deprecated in Java       
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:208:72 'getter for navigationBarColor: Int' is deprecated. Deprecated in Java   
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:214:16 'setter for navigationBarColor: Int' is deprecated. Deprecated in Java   
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:5:34 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:138:66 Elvis operator (?:) always returns the left operand of non-nullable type Boolean
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:142:9 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:144:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:146:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:148:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:150:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:152:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:154:13 'MapBuilder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarView.kt:153:43 Parameter 'flag' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:7:34 'ReactFeatureFlags' is deprecated. Deprecated in Java   
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:25:13 'ReactFeatureFlags' is deprecated. Deprecated in Java  
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledHeaderConfigViewGroup.kt:17:25 Parameter 'wrapper' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:10:25 Parameter 'wrapper' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:13:9 Parameter 'width' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:14:9 Parameter 'height' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:15:9 Parameter 'headerHeight' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/NativeProxy.kt:7:36 Parameter 'fabricUIManager' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/NativeProxy.kt:11:13 Parameter 'tag' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/NativeProxy.kt:12:13 Parameter 'view' is never used
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/NativeProxy.kt:15:33 Parameter 'tag' is never used
+
+> Task :react-native-screens:compileReleaseJavaWithJavac
+Note: C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android\src\paper\java\com\swmansion\rnscreens\NativeScreensModuleSpec.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
+[CXX5304] This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+[CXX5304] This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :expo-web-browser:compileReleaseKotlin
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:112:15 'setToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:117:15 'setSecondaryToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:123:15 'addDefaultShareMenuItem(): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+
+> Task :expo-image:kaptReleaseKotlin
+Note: [2] Wrote GeneratedAppGlideModule with: [com.github.penfeizhou.animation.glide.GlideAnimationModule, com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule, com.bumptech.glide.integration.avif.AvifGlideModule, expo.modules.image.decodedsource.DecodedModule, expo.modules.image.blurhash.BlurhashModule, expo.modules.image.dataurls.Base64Module, expo.modules.image.thumbhash.ThumbhashModule, expo.modules.image.okhttp.ExpoImageOkHttpClientGlideModule, expo.modules.image.svg.SVGModule]
+
+> Task :react-native-screens:buildCMakeRelWithDebInfo[armeabi-v7a] FAILED
+C/C++: ninja: error: manifest 'build.ninja' still dirty after 100 tries
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-screens:buildCMakeRelWithDebInfo[armeabi-v7a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android\.cxx\RelWithDebInfo\362a3w6q\armeabi-v7a'
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\Hello\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\Users\\Hello\\OneDrive\\Desktop\\pc_telemetry_agent JavaScript\\TelemetryApp\\node_modules\\react-native-screens\\android\\.cxx\\RelWithDebInfo\\362a3w6q\\armeabi-v7a" ^
+        rnscreens
+    from C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android
+  ninja: error: manifest 'build.ninja' still dirty after 100 tries
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7m 32s
+353 actionable tasks: 341 executed, 12 up-to-date
+PS C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp> 

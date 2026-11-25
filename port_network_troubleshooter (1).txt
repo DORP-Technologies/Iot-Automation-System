@@ -1,0 +1,18 @@
+$ports = 8080, 8081
+
+Write-Host "--- Active IPv4 Addresses ---" -ForegroundColor Cyan
+Get-NetIPAddress -AddressFamily IPv4 |
+  Where-Object { $_.IPAddress -notlike "127.*" -and $_.IPAddress -notlike "169.254.*" } |
+  Select-Object InterfaceAlias, IPAddress, PrefixOrigin
+
+foreach ($port in $ports) {
+  Write-Host "`n--- Listening on Port $port ---" -ForegroundColor Cyan
+  Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue |
+    Select-Object LocalAddress, LocalPort, OwningProcess, @{Name="Process";Expression={(Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue).ProcessName}}
+
+  Write-Host "`n--- Firewall Rules Matching Port $port ---" -ForegroundColor Cyan
+  Get-NetFirewallPortFilter -ErrorAction SilentlyContinue |
+    Where-Object { $_.LocalPort -contains "$port" -or $_.LocalPort -eq "Any" } |
+    ForEach-Object { $_ | Get-NetFirewallRule } |
+    Select-Object Name, Enabled, Direction, Action, Profile
+}

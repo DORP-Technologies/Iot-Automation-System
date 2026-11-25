@@ -1,0 +1,17 @@
+﻿{
+    "expo":  {
+                 "android":  {
+                                 "package":  "com.anonymous.telemetryapp",
+                                 "permissions":  [
+                                                     "INTERNET",
+                                                     "ACCESS_NETWORK_STATE",
+                                                     "ACCESS_WIFI_STATE",
+                                                     "CHANGE_WIFI_MULTICAST_STATE"
+                                                 ],
+                                 "usesCleartextTraffic":  true
+                             },
+                 "plugins":  [
+                                 "react-native-ble-plx"
+                             ]
+             }
+}

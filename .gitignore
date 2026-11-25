@@ -1,0 +1,21 @@
+﻿# Node / Expo / React Native
+node_modules/
+.expo/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+android/.gradle/
+android/app/build/
+android/build/
+android/captures/
+android/local.properties
+*.keystore
+*.jks
+
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# OS & editor clutter
+.DS_Store
+Thumbs.db
