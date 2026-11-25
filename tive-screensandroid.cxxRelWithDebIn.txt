@@ -1,0 +1,825 @@
+tive-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\Hello\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\Users\\Hello\\OneDrive\\Desktop\\pc_telemetry_agent JavaScript\\TelemetryApp\\node_modules\\react-native-screens\\android\\.cxx\\RelWithDebInfo\\362a3w6q\\armeabi-v7a" ^
+        rnscreens
+    from C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android
+  ninja: error: manifest 'build.ninja' still dirty after 100 tries
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 4h 42m 8s
+354 actionable tasks: 22 executed, 332 up-to-date
+PS C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp> $env:NODE_ENV = "production"
+>> Push-Location .\android
+>> .\gradlew assembleRelease
+>> Pop-Location
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Configure project :expo
+
+Using expo modules
+  - expo-asset (11.0.5)
+  - expo-constants (17.0.8)
+  - expo-file-system (18.0.12)
+  - expo-font (13.0.4)
+  - expo-image (2.0.7)
+  - expo-keep-awake (14.0.3)
+  - expo-modules-core (2.2.3)
+  - expo-splash-screen (0.29.24)
+  - expo-web-browser (14.0.2)
+
+
+> Configure project :react-native-reanimated
+Android gradle plugin: 8.6.0
+Gradle: 8.10.2
+
+> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
+[CXX5304] This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+[CXX5304] This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :expo:compileReleaseKotlin
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:163:34 'constructor ReactDelegate(Activity!, ReactNativeHost!, String?, Bundle?)' is deprecated. Deprecated in Java
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:40:16 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
+w: file:///C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent%20JavaScript/TelemetryApp/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:42:11 'deallocate(): Unit' is deprecated. Use sharedObjectDidRelease() instead.
+
+> Task :react-native-screens:buildCMakeRelWithDebInfo[armeabi-v7a] FAILED
+C/C++: ninja: error: manifest 'build.ninja' still dirty after 100 tries
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-screens:buildCMakeRelWithDebInfo[armeabi-v7a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android\.cxx\RelWithDebInfo\362a3w6q\armeabi-v7a'
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+  [0/1] Re-running CMake...
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Hello/OneDrive/Desktop/pc_telemetry_agent JavaScript/TelemetryApp/node_modules/react-native-screens/android/.cxx/RelWithDebInfo/362a3w6q/armeabi-v7a
+
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\Hello\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\Users\\Hello\\OneDrive\\Desktop\\pc_telemetry_agent JavaScript\\TelemetryApp\\node_modules\\react-native-screens\\android\\.cxx\\RelWithDebInfo\\362a3w6q\\armeabi-v7a" ^
+        rnscreens
+    from C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp\node_modules\react-native-screens\android
+  ninja: error: manifest 'build.ninja' still dirty after 100 tries
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 59s
+361 actionable tasks: 28 executed, 333 up-to-date
+PS C:\Users\Hello\OneDrive\Desktop\pc_telemetry_agent JavaScript\TelemetryApp> 
+
+
+
+
+
+
+
+

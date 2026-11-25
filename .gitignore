@@ -2,6 +2,18 @@
 target/
 **/*.rs.bk
 
+# Node / Expo / React Native / Android
+node_modules/
+.expo/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+*.keystore
+*.jks
+releases/
+*.apk
+
 # Scratch text files
 *.txt
 

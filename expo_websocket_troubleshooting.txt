@@ -1,0 +1,151 @@
+================================================================================
+PC TELEMETRY MONITOR - EXPO GO WEBSOCKET TROUBLESHOOTING GUIDE (WINDOWS + ANDROID)
+Target Host IP: 192.168.0.174 | Ports Checked: 8080 / 8081
+================================================================================
+
+STEP 1: VERIFY WHICH PROCESS & ADDRESS YOUR SERVER IS LISTENING ON
+--------------------------------------------------------------------------------
+Why: If your server is bound to 127.0.0.1 (localhost) instead of 0.0.0.0 or
+192.168.0.174, your Android phone on Wi-Fi will be refused even with the
+firewall disabled.
+
+Run in Windows PowerShell:
+    netstat -ano | findstr ":8080 :8081"
+
+What to look for:
+    - GOOD: TCP    0.0.0.0:8080         0.0.0.0:0       LISTENING       <PID>
+            TCP    192.168.0.174:8080   0.0.0.0:0       LISTENING       <PID>
+    - BAD:  TCP    127.0.0.1:8080       0.0.0.0:0       LISTENING       <PID>
+
+Check which executable owns the <PID>:
+    Get-Process -Id <PID>
+
+Fix if bound to 127.0.0.1:
+    - In Rust (tokio / tungstenite / axum): bind to "0.0.0.0:8080" instead of
+      "127.0.0.1:8080".
+    - In Node.js (ws): use new WebSocketServer({ host: '0.0.0.0', port: 8080 })
+
+
+STEP 2: CHECK WINDOWS NETWORK PROFILE & ADD FIREWALL INBOUND RULES
+--------------------------------------------------------------------------------
+Why: Windows blocks incoming LAN traffic on Public networks by default, and your
+earlier PowerShell check showed NO firewall rules matching ports 8080 or 8081.
+
+1. Check your Wi-Fi network profile category (run PowerShell as Administrator):
+    Get-NetConnectionProfile
+
+2. Set Wi-Fi profile to Private if it shows Public:
+    Set-NetConnectionProfile -InterfaceAlias "Wi-Fi" -NetworkCategory Private
+
+3. Add explicit Inbound Firewall rules for Ports 8080 and 8081 (Admin PowerShell):
+    New-NetFirewallRule -DisplayName "PC Telemetry WS 8080" -Direction Inbound -Protocol TCP -LocalPort 8080 -Action Allow -Profile Any
+    New-NetFirewallRule -DisplayName "PC Telemetry WS 8081" -Direction Inbound -Protocol TCP -LocalPort 8081 -Action Allow -Profile Any
+
+4. Verify the rules were created:
+    Get-NetFirewallRule -DisplayName "PC Telemetry WS*" | Select-Object DisplayName, Enabled, Action, Profile
+
+
+STEP 3: TEST TCP REACHABILITY FROM YOUR PC & PHONE BROWSER
+--------------------------------------------------------------------------------
+Why: Isolate whether the issue is network/firewall routing or React Native code.
+
+1. Test local loopback + LAN IP on Windows PowerShell:
+    Test-NetConnection -ComputerName 192.168.0.174 -Port 8080
+    Test-NetConnection -ComputerName 192.168.0.174 -Port 8081
+    (Look for "TcpTestSucceeded : True" on the active port)
+
+2. Test from your Android phone's Chrome browser (connected to same Wi-Fi):
+    Open Chrome on Android and navigate to:
+        http://192.168.0.174:8080
+        (or http://192.168.0.174:8081)
+
+    What the result means:
+    - "Upgrade Required" / blank response / HTTP 400 or 426:
+      SUCCESS! Phone can reach the server. Issue is in React Native JS code.
+    - "ERR_CONNECTION_TIMED_OUT" or "ERR_ADDRESS_UNREACHABLE":
+      Network/Router AP isolation or Windows Firewall is still blocking traffic.
+
+
+STEP 4: CHECK WI-FI ROUTER / HOTSPOT AP ISOLATION & SUBNET
+--------------------------------------------------------------------------------
+Why: Many routers and mobile hotspots enable "AP Isolation" or "Client Isolation",
+preventing wireless devices from talking to each other on 192.168.0.x.
+
+1. Confirm your PC's current IP (DHCP can reassign it):
+    ipconfig | findstr /i "IPv4"
+
+2. On your Android phone:
+    - Go to Settings > Wi-Fi > Current Network > View IP address.
+    - Confirm it starts with 192.168.0.xxx (same subnet as 192.168.0.174).
+    - Turn OFF Mobile Data temporarily while testing so Android does not route
+      192.168.0.174 over cellular data.
+    - If using a Windows Mobile Hotspot or router, ensure "AP Isolation" /
+      "Client Isolation" is disabled.
+
+
+STEP 5: AVOID PORT 8081 COLLISION WITH EXPO METRO BUNDLER
+--------------------------------------------------------------------------------
+Why: Expo Metro Bundler runs on Port 8081 by default. If your WebSocket server
+also uses Port 8081, Metro and your telemetry server will conflict.
+
+1. Check what is running on 8081:
+    netstat -ano | findstr ":8081"
+
+2. Recommended port split:
+    - Expo Metro Bundler: Port 8081 (default)
+    - Telemetry WebSocket Server: Port 8080 (or 8082 / 9000)
+
+3. Start Expo cleanly on LAN mode:
+    npx expo start --go --lan --clear
+
+
+STEP 6: LOG FULL WEBSOCKET ERROR DETAILS IN REACT NATIVE
+--------------------------------------------------------------------------------
+Why: In React Native, `error.message` on `ws.onerror` is often undefined or generic.
+Update your WebSocket client code to log the full event and confirm the URL:
+
+    useEffect(() => {
+      const WS_URL = 'ws://192.168.0.174:8080'; // Confirm port matches Step 1!
+      console.log('Attempting connection to:', WS_URL);
+
+      const ws = new WebSocket(WS_URL);
+
+      ws.onopen = () => {
+        console.log('Connected to Telemetry Server');
+        setConnected(true);
+      };
+
+      ws.onmessage = (event) => {
+        console.log('Received:', event.data);
+      };
+
+      ws.onerror = (error) => {
+        console.error('WebSocket Error Details:', JSON.stringify(error));
+      };
+
+      ws.onclose = (event) => {
+        setConnected(false);
+        console.log('Disconnected. Code:', event.code, 'Reason:', event.reason);
+      };
+
+      return () => {
+        if (ws.readyState === WebSocket.OPEN || ws.readyState === WebSocket.CONNECTING) {
+          ws.close();
+        }
+      };
+    }, []);
+
+
+STEP 7: QUICK ADB REVERSE WORKAROUND (USB CABLE TEST)
+--------------------------------------------------------------------------------
+Why: If Wi-Fi router isolation blocks LAN connections, test over USB via ADB
+to confirm your app and telemetry server communicate properly:
+
+1. Connect Android phone via USB (with USB Debugging enabled) and run:
+    adb devices
+    adb reverse tcp:8080 tcp:8080
+
+2. Temporarily point React Native WebSocket URL to:
+    ws://localhost:8080
+
+================================================================================
