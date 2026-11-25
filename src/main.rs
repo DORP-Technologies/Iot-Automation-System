@@ -1,7 +1,7 @@
 #![allow(unused_imports)]
 
 use active_win_pos_rs::get_active_window;
-use battery::Manager as BatteryManager;
+use battery::{Manager as BatteryManager, State as BatteryState};
 use serde::Serialize;
 use std::net::{TcpListener, UdpSocket};
 use std::sync::{Arc, Mutex};
@@ -12,15 +12,21 @@ use tungstenite::{accept, Message};
 
 #[derive(Serialize, Clone, Default)]
 pub struct TelemetryPayload {
-    active_window: String,
-    ram_usage_percent: f32,
-    timestamp: u64,
+    pub active_window: String,
+    pub ram_usage_percent: f32,
+    pub timestamp: u64,
     // Optional extra fields for your UI:
-    cpu_usage_percent: f32,
-    used_mem_mb: u64,
-    total_mem_mb: u64,
-    net_down_kbps: f64,
-    net_up_kbps: f64,
+    pub cpu_usage_percent: f32,
+    pub used_mem_mb: u64,
+    pub total_mem_mb: u64,
+    pub net_down_kbps: f64,
+    pub net_up_kbps: f64,
+    // Battery telemetry fields for JavaScript sync:
+    pub battery_percent: Option<f32>,
+    pub is_charging: bool,
+    pub battery_state: String,
+    // Storage telemetry field for JavaScript sync:
+    pub storage: String,
 }
 
 /// Starts a background thread that broadcasts the telemetry agent's service
@@ -178,22 +184,41 @@ fn main() {
         };
 
         // --- D. BATTERY STATUS ---
-        let battery_status = if let Some(ref manager) = battery_manager {
-            match manager.batteries() {
-                Ok(mut batteries) => {
-                    if let Some(Ok(bat)) = batteries.next() {
-                        let charge_pct = bat.state_of_charge().value * 100.0;
-                        let state = format!("{:?}", bat.state());
-                        format!("{:.1}% [{}]", charge_pct, state)
-                    } else {
-                        String::from("No battery detected (AC / Desktop)")
+        let (battery_percent, is_charging, battery_state, battery_status) =
+            if let Some(ref manager) = battery_manager {
+                match manager.batteries() {
+                    Ok(mut batteries) => {
+                        if let Some(Ok(bat)) = batteries.next() {
+                            let charge_pct = bat.state_of_charge().value * 100.0;
+                            let state = bat.state();
+                            let charging = matches!(state, BatteryState::Charging);
+                            let state_str = format!("{:?}", state);
+                            let status_line = format!("{:.1}% [{}]", charge_pct, state_str);
+                            (Some(charge_pct), charging, state_str, status_line)
+                        } else {
+                            (
+                                None,
+                                false,
+                                String::from("NoBattery"),
+                                String::from("No battery detected (AC / Desktop)"),
+                            )
+                        }
                     }
+                    Err(_) => (
+                        None,
+                        false,
+                        String::from("ReadError"),
+                        String::from("Battery read error"),
+                    ),
                 }
-                Err(_) => String::from("Battery read error"),
-            }
-        } else {
-            String::from("Battery interface unavailable")
-        };
+            } else {
+                (
+                    None,
+                    false,
+                    String::from("Unavailable"),
+                    String::from("Battery interface unavailable"),
+                )
+            };
 
         // --- E. NETWORK TRAFFIC (Interval delta & totals) ---
         let mut rx_delta_kb: f64 = 0.0;
@@ -224,6 +249,7 @@ fn main() {
                 total_gb
             ));
         }
+        let storage_summary = disk_summary.join(" | ");
 
         let ts = SystemTime::now()
             .duration_since(UNIX_EPOCH)
@@ -241,6 +267,10 @@ fn main() {
                 total_mem_mb,
                 net_down_kbps: down_kbps,
                 net_up_kbps: up_kbps,
+                battery_percent,
+                is_charging,
+                battery_state,
+                storage: storage_summary.clone(),
             };
         }
 
@@ -259,7 +289,7 @@ fn main() {
             total_rx_mb,
             total_tx_mb
         );
-        println!(" Storage       : {}", disk_summary.join(" | "));
+        println!(" Storage       : {}", storage_summary);
 
         for comp in &components {
             println!(" Sensor [{}] : {:.1}°C", comp.label(), comp.temperature());
